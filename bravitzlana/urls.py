@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from bravitzlana import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^play/<game_id>/', None),
-    url(r'^save/<game_id>/', None),
-    url(r'^upload/<game_id>/', None),
+    # url(r'^play/<game_id>/', None),
+    # url(r'^save/<game_id>/', None),
+    url(r'^upload/?', views.upload),
 ]
