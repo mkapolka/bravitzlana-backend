@@ -18,9 +18,12 @@ from django.contrib import admin
 
 from bravitzlana import views
 
+UUID_REGEX = '[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}'
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^play/<game_id>/', None),
     # url(r'^save/<game_id>/', None),
+    url(r'(?i)^saves/(%s).json$' % UUID_REGEX, views.save_data),
     url(r'^upload/?', views.upload),
 ]
