@@ -1,7 +1,10 @@
+import uuid
+
 from django.db import models
 
 
 class Game(models.Model):
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=128)
     description = models.TextField()
     save_data = models.FileField(upload_to='games/')
