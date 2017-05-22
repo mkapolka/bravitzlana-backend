@@ -1,0 +1,14 @@
+bravitzlana/static/Build/UnityLoader.js filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.asm.code.unityweb filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.asm.framework.unityweb filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.asm.library.unityweb filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.asm.memory.unityweb filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.data.unityweb filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Build/br_web.json filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Relase/* filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/UnityLoader.js filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/br_web.asm.js filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/br_web.data filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/br_web.js filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/br_web.mem filter=lfs diff=lfs merge=lfs -text
+bravitzlana/static/Release/TemplateData/* filter=lfs diff=lfs merge=lfs -text
