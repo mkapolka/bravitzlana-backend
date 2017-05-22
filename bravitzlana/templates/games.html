@@ -1,0 +1,7 @@
+<ul>
+{% for game in games %}
+  <li>
+  <a href="{% url 'play' game.uuid %}">{{ game.name }}</a>
+  </li>
+{% endfor %}
+</ul>
