@@ -13,3 +13,5 @@ DATABASES = {
 }
 
 DEBUG = False
+
+ALLOWED_HOSTS = ['.bravitzlana.com', 'bravitzlana.com']
