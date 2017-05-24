@@ -50,7 +50,6 @@ def play(request, uuid, uuid_override=None):
 
 
 def new(request, uuid_override):
-    print(uuid_override)
     if not uuid_override:
         return redirect('new', uuid.uuid4())
     else:
@@ -61,5 +60,4 @@ def games(request):
     context = {
         'games': Game.objects.order_by('-created')[:10]
     }
-    print(context)
     return render(request, 'games.html', context)
