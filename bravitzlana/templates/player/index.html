@@ -11,7 +11,9 @@
     <div class="player-container">
       <h1>{{name}}</h1>
       <!--<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="600px"></canvas>-->
-      <div class="description"> {{description}} </div>
+      {% if description %}
+        <div class="description"> {{description}} </div>
+      {% endif %}
       <div id="upload-container"><h2>Game uploaded to: <a href="" id="upload-link"></h2></a></div>
       <div id="styled-game-container">
         <div id="gameContainer"></div>
