@@ -8,15 +8,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/play.css' %}"/>
   </head>
   <body>
-    <div class="player-container">
+    <div class="player-container" id="player-container">
       <h1>{{name}}</h1>
       <!--<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="600px"></canvas>-->
       {% if description %}
         <div class="description"> {{description}} </div>
       {% endif %}
       <div id="upload-container"><h2>Game uploaded to: <a href="" id="upload-link"></h2></a></div>
-      <div id="styled-game-container">
-        <div id="gameContainer"></div>
+      <div id="mouse-catcher">
+        <div id="styled-game-container">
+          <div id="gameContainer"></div>
+        </div>
       </div>
     </div>
     <script type='text/javascript'>
@@ -38,6 +40,16 @@
 </script>
 <!--<script src={% static "Release/UnityLoader.js" %}></script>--!>
 <script type="text/javascript">
+document.getElementById("mouse-catcher").addEventListener('mousedown', function (event) {
+  var canvas = document.getElementById("#canvas");
+  if (event.which == 3 && event.target != canvas) {
+    event.stopPropagation();
+    var newEvent = new MouseEvent(event.type, event);
+    canvas.dispatchEvent(newEvent);
+  }
+});
+document.getElementById("mouse-catcher").addEventListener('contextmenu', event => event.preventDefault());
+
 function onWebLoaderReady() {
   {% if uuid_override %}
     gameInstance.SendMessage("WebLoader", "LoadSaveFileByUUIDWithOverride", "{{ uuid }}/{{ uuid_override }}");

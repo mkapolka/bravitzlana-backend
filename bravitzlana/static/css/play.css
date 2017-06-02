@@ -12,7 +12,11 @@ body {
 div.player-container {
   display: block;
   margin: auto;
-  width: 800px;
+  width: 100%;
+}
+
+div#mouse-catcher {
+  width: 100%;
 }
 
 canvas {
