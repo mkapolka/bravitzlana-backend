@@ -9,6 +9,10 @@ from django.views.decorators.csrf import csrf_exempt
 from bravitzlana.models import Game
 
 
+def main(request):
+    return render(request, 'index.html')
+
+
 @csrf_exempt
 def upload(request):
     if request.method != 'POST':
