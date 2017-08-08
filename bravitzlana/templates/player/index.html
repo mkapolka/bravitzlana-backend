@@ -9,11 +9,14 @@
   </head>
   <body>
     <div class="player-container" id="player-container">
-      <h1>{{name}}</h1>
+      {% if name %}
+        <h1>{{name}}</h1>
+      {% endif %}
       <!--<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="600px"></canvas>-->
       {% if description %}
         <div class="description"> {{description}} </div>
       {% endif %}
+      <br/>
       <div id="upload-container"><h2>Game uploaded to: <a href="" id="upload-link"></h2></a></div>
       <div id="mouse-catcher">
         <div id="styled-game-container">
