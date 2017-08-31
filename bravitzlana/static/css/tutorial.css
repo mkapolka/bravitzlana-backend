@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Parvas';
+  src: url('../font/Parvas.ttf');
+}
+
+body {
+  background-image: url('../img/tutorial_bg.png');
+  background-repeat: repeat;
+  font-family: 'Parvas';
+  margin: 0;
+}
+
+div.player-container {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+div#mouse-catcher {
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+div {
+  color: #111;
+  text-align: center;
+}
+
+div#gameContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+div#styled-game-container {
+  width: 80vh;
+  min-width: 800px;
+  height: 80vh;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #53a9ff;
+  border-radius: 5px;
+}
+
+div#upload-container {
+  display: none;
+  width: 800px;
+  margin: 5px 0;
+  background: #eccbfa;
+  border: 5px solid #d790f5;
+  border-radius: 5px;
+}
+
+div.description {
+  display: block;
+  background: #add6ff;
+  border: 5px solid #53a9ff;
+  border-radius: 3px;
+  margin: .5vh auto;
+  padding: 1vh;
+  font-size: 1em;
+  width: 78.5vh;
+  min-width: 800px;
+}
+
+div.description img {
+  margin: 0 auto;
+  display: block;
+}

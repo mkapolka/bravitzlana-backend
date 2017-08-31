@@ -14,6 +14,7 @@ class Game(models.Model):
     description = models.TextField(default='')
     save_data = models.FileField(upload_to=generate_save_path)
     is_new_template = models.BooleanField(default=False)
+    is_tutorial_game = models.BooleanField(default=False)
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)

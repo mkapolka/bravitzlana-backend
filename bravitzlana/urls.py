@@ -21,7 +21,7 @@ from bravitzlana import views
 UUID_REGEX = '[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}'
 
 urlpatterns = [
-    url(r'^/?$', views.main),
+    url(r'^$', views.main),
     url(r'^admin/', admin.site.urls),
     url(r'^(?i)new(?:/(%s))?/?' % UUID_REGEX, views.new, name='new'),
     url(r'^(?i)play/(%s)/?' % UUID_REGEX, views.play, name='play'),
@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'(?i)^data/(%s).json$' % UUID_REGEX, views.save_data),
     url(r'^upload/?', views.upload),
     url(r'^games/?', views.games),
+    url(r'^tutorial/?', views.tutorial)
 ]

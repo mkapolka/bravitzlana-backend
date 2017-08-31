@@ -11,9 +11,10 @@ class Command(BaseCommand):
         parser.add_argument('--file', dest='filename', type=str)
         parser.add_argument('--name', type=str)
         parser.add_argument('--description', type=str, default='')
-        parser.add_argument('--is_new_template', action='store_true')
+        parser.add_argument('--is-new-template', action='store_true')
+        parser.add_argument('--is-tutorial-template', action='store_true')
 
-    def handle(self, filename, name, description, is_new_template, *args, **kwargs):
+    def handle(self, filename, name, description, is_new_template, is_tutorial_template, *args, **kwargs):
         if not os.path.exists(filename):
             raise CommandError("File does not exist.")
         with open(filename, 'r') as file_handle:
@@ -21,5 +22,6 @@ class Command(BaseCommand):
             game = Game.objects.create(name=name,
                                        description=description,
                                        is_new_template=is_new_template,
+                                       is_tutorial_game=is_tutorial_template,
                                        save_data=dj_file)
             print("Game UUID: %s" % game.uuid)

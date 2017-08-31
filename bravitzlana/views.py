@@ -53,6 +53,14 @@ def play(request, uuid, uuid_override=None):
         return HttpResponseNotFound
 
 
+def tutorial(request):
+    game = Game.objects.get(is_tutorial_game=True)
+    context = {
+        'uuid': game.uuid,
+    }
+    return render(request, 'player/tutorial.html', context)
+
+
 def new(request, uuid_override):
     if not uuid_override:
         return redirect('new', uuid.uuid4())
