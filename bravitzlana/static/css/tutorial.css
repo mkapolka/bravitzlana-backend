@@ -41,7 +41,6 @@ div#gameContainer {
 
 div#styled-game-container {
   width: 80vh;
-  min-width: 800px;
   height: 80vh;
   display: block;
   margin: 0 auto;
@@ -67,10 +66,17 @@ div.description {
   padding: 1vh;
   font-size: 1em;
   width: 78.5vh;
-  min-width: 800px;
 }
 
 div.description img {
   margin: 0 auto;
   display: block;
+  max-width: 100%;
+}
+
+a.navbutton {
+  font-size: 2em;
+  width: 40%;
+  text-align: center;
+  display: inline-block;
 }
