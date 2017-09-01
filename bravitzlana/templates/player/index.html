@@ -13,7 +13,9 @@
         <h1>{{name}}</h1>
       {% endif %}
       <!--<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="600px"></canvas>-->
-      {% if description %}
+      {% if is_new %}
+        <div class="description">New to Bravitzlana? Check out the <a href="/tutorial">tutorial!</a></div>
+      {% elif description %}
         <div class="description"> {{description}} </div>
       {% endif %}
       <br/>
@@ -25,6 +27,9 @@
         <div id="instructions">wasd or arrows to move, right click & drag to rotate camera, click to interact</div>
       </div>
     </div>
+    {% if not is_new %}
+      <div class="new_button"><a href="/new">I want to make one!</a></div>
+    {% endif %}
     <script type='text/javascript'>
   /*var Module = {
     TOTAL_MEMORY: 268435456,

@@ -38,13 +38,14 @@ def save_data(request, uuid):
         return HttpResponseNotFound
 
 
-def play(request, uuid, uuid_override=None):
+def play(request, uuid, uuid_override=None, is_new=False):
     try:
         game = Game.objects.get(uuid=uuid)
         context = {
             'uuid': game.uuid,
             'name': game.name,
-            'description': game.description
+            'description': game.description,
+            'is_new': is_new
         }
         if uuid_override:
             context['uuid_override'] = uuid_override
@@ -65,7 +66,7 @@ def new(request, uuid_override):
     if not uuid_override:
         return redirect('new', uuid.uuid4())
     else:
-        return play(request, Game.objects.filter(is_new_template=True)[0].uuid, uuid_override)
+        return play(request, Game.objects.filter(is_new_template=True)[0].uuid, uuid_override, True)
 
 
 def games(request):

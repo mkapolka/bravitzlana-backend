@@ -80,3 +80,16 @@ div.description {
   font-size: 2vh;
   width: 78.5vh;
 }
+
+div.new_button {
+  display: block;
+  position: absolute;
+  background: #fffde1;
+  border: 3px solid #bdfdd6;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 2vh;
+  width: 10vh;
+  right: 30px;
+  top: 30px;
+}
